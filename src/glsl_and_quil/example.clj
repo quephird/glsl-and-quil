@@ -28,4 +28,4 @@
   :setup    setup
   :renderer :p3d
   :draw     draw
-  :size     [800 800])
+  :size     [600 600])
