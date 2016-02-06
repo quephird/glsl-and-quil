@@ -24,9 +24,15 @@ Once it is running, load the example sketch like so,
 
 ## Caveats
 
-floats
+#### Uniforms
 
-resource directory for shaders
+Make sure to explicitly cast numbers that will passed from Clojure into GLSL uniforms as floats. If you do not, you will likely encounter an error such as this:
+
+![](error.png)
+
+#### Location of shader files
+
+By default, quil sketches (actually, Leiningen projects in general) will find shader files in the resources subdirectory in your project. You can override the default by setting the `:resource-paths` property in your project.clj file; look [here](https://github.com/technomancy/leiningen/blob/master/sample.project.clj) for an example.
 
 ## Useful links
 
